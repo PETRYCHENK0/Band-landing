@@ -1,0 +1,545 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root{
+	font-family: Trebuchet MS;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	scroll-behavior: smooth;
+}
+
+header{
+	background: #0e0e12;
+	height: 50px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 5vw;
+
+
+}
+
+#logo{
+	width: 120px;
+	height: auto;
+
+}
+
+.burger-menu {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.burger-menu span {
+	display: block;
+	height: 30%;
+	width: 100%;
+	background-color: white;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+	transform: translateY(7px) rotate(45deg);
+}
+.burger-menu.active span:nth-child(2) {
+	opacity: 0;
+}
+.burger-menu.active span:nth-child(3) {
+	transform: translateY(-7px) rotate(-45deg);
+}
+
+nav{
+
+}
+
+ul{
+	list-style: none;
+}
+
+ul a{
+	text-decoration: none;
+	color: white;
+
+		&:hover{
+		color: #EDA012;
+	}
+}
+
+ul li{
+	
+	display: inline;
+	margin: 0px 10px;
+}
+
+#main-banner{
+	max-width: 100%;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(images/banner.png);
+	background-position: center;
+}
+
+#main-banner-text{
+	color: white;
+	width: 70%;
+}
+
+#main-banner-text span{
+	color: cyan;
+	font-weight: bold;
+}
+
+#main-banner-text button{
+	text-transform: uppercase;
+	font-weight: 600;
+	background: #FFDF20;
+	border: 0;
+	border-radius: 4px;
+	padding: 10px 8px;
+	font-size: 16px;
+	margin-top: 10px;
+
+	&:hover{
+		background: #EDA012;
+		cursor: pointer;
+	}
+}
+
+#concerts-members{
+	max-width: 100%;
+	min-height: 800px;
+	background: #0e0e12;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
+#table{
+	width: 70%;
+	border-collapse: collapse;
+	background: #1b1e29;
+	color: white;
+
+
+}
+tbody{
+
+	background: #151821;
+
+}
+
+
+
+#table th{
+	text-align: left;
+	font-size: 20px;
+
+
+}
+
+#table tr{
+	border: 2px solid #1e222c;
+	height: 50px;
+
+
+}
+
+.first-column{
+	padding-left: 15px;
+}
+
+#table button{
+	background: #f82c56;
+	color: white;
+	font-weight: 600;
+	border: 0;
+	border-radius: 4px;	
+	padding: 8px 12px;
+
+	&:hover{
+		background: #8F1427;
+		cursor: pointer;
+	}
+}
+
+#members-header{
+	color: white;
+	margin-top: 100px;
+	margin-bottom: 30px;
+}
+
+#members{
+	color: white;
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+
+}
+
+.cards img{
+ 	max-width: 200px;
+ 	height: auto;
+ 	border-top-left-radius: 15px;
+ 	border-top-right-radius: 15px;
+}
+
+.cards{
+	background: #151821;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid #1e222c;
+	border-radius: 15px;
+}
+
+.cards p{
+margin: 10px 0px;
+align-self: center;
+
+}
+
+#history{
+	background: linear-gradient(90deg,rgba(27, 41, 48, 1) 0%, rgba(36, 9, 3, 1) 100%);
+	display: flex;
+	flex-direction: column;
+	color: white;
+	align-items: center;
+	justify-content: center;
+}
+
+#history-content{
+	width: 70%;
+    margin: 50px 0px;
+}
+
+#history-content h2{
+	margin-top: 0;
+}
+
+#history-content img{
+	width: 300px;
+	height: auto;
+	float: right;
+	border: 2px solid #1e222c;
+}
+
+#contact-us{
+	background: linear-gradient(90deg,rgba(36, 9, 3, 1) 0%, rgba(27, 41, 48, 1) 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 50px 0px;
+
+}
+
+#contact-us h2{
+	margin-bottom: 0;
+}
+
+#contacts-grid{
+	display: grid;
+	width: 70%;
+	grid-template-rows: 10fr 45fr;
+	grid-template-columns: 10fr 10fr 20fr;
+	row-gap: 15px;
+	column-gap: 25px;
+	grid-template-areas: 
+	"name email map"
+	"message message map";
+}
+
+#contacts-grid fieldset{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#name-area{
+	grid-area: name;
+	width: 100%;
+
+}
+
+
+#contacts-grid input{
+	background: #151821;
+	color: white;
+	border: 2px solid #1e222c;
+	width: 100%;
+	margin-top: 6px;
+	border-radius: 5px;
+	padding: 0;
+
+	&:user-valid{
+		border-color: green;
+	}
+
+	&:user-invalid{
+		border-color: red;
+	}
+}
+
+
+#email-area{
+	grid-area: email;
+}
+
+
+#message-area{
+	grid-area: message;
+	justify-self: center;
+	width: 100%;
+}
+
+#message-area textarea{
+	width: 100%;
+	height: 60%;
+	padding: 0;
+	background: #151821;
+	color: white;
+	margin-top: 6px;
+	border-radius: 5px;
+	border: 2px solid #1e222c;
+
+	&:user-valid{
+		border-color: green;
+	}
+
+	&:user-invalid{
+		border-color: red;
+	}
+}
+
+#message-area button{
+	background: #f82c56;
+	color: white;
+	font-weight: 600;
+    border: 0;
+	border-radius: 4px;	
+	padding: 10px 12px;
+	margin-top: 10px;
+
+	&:hover{
+		background: #8F1427;
+		cursor: pointer;
+	}
+
+}
+
+#map{
+	grid-area: map;
+	align-self: stretch;
+	background: #151821;
+	border-radius: 5px;
+	border: 2px solid #1e222c;
+	padding: 0px 15px;
+	padding-bottom: 18px;
+	display: flex;
+	flex-direction: column;
+}
+
+#map h3{
+	margin: 18px 0px;
+}
+
+#map iframe{
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+
+}
+
+footer{
+	background: #0b0d10;
+	min-height: 180px;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	
+}
+
+#footer-content{
+	display: grid;
+	width: 70%;
+	justify-content: center;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"copyright social-networks"
+	"email-phone .";
+}
+
+#copyright{
+	grid-area: copyright;
+	align-self: end;
+	color: #8e929c;
+}
+
+#email-phone{
+	grid-area: email-phone;
+	align-self: start;
+	color: white;
+}
+
+#social-networks{
+	grid-area: social-networks;
+	align-self: end;
+	text-align: right;
+	color: #8e929c;
+
+}
+
+#social-networks a{
+	color: #8e929c;
+	text-decoration: none;
+
+	&:hover{
+		color: #E7180B;
+	}
+}
+
+@media (max-width: 500px){
+	#contacts-grid{
+		display:flex;
+		flex-direction:column;
+		width: 90%;
+	}
+
+	#contact-us h2{
+		width: 90%;
+	}
+
+	#contact-us > p{
+		width: 90%;
+	}
+
+
+	#main-banner{
+
+	height:400px;
+
+	}
+}
+
+@media (max-width: 650px){
+
+	#members{
+		flex-direction: column;
+			align-items: center;
+		justify-content: center;
+	}
+
+	.cards{
+		margin-bottom: 7vh;
+	}
+
+	#table{
+		margin-top: 7vh;
+		width: 90%;
+	}
+
+	#footer-content{
+		width: 90%;
+	}
+
+	#contacts-grid{
+		width: 90%;
+	}
+
+	#history-content{
+		width: 90%;
+	}
+
+	#history-content img{
+		float: none;
+		width: 100%;
+	}
+
+	#main-banner-text{
+		width: 90%;
+	}
+
+}
+
+@media (max-width: 768px) {
+	
+	header {
+		position: relative; 
+	}
+
+	.burger-menu {
+		display: flex;
+	}
+
+	nav {
+		position: absolute;
+		top: 50px;
+		left: 0;
+		width: 100%;
+		background: #0e0e12;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.4s ease-in-out;
+		z-index: 99;
+	}
+
+	nav.open {
+		max-height: 300px; 
+	}
+
+	ul {
+		padding: 20px 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	ul li {
+		display: block; 
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: 930px){
+
+	#footer-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	}
+
+	#copyright{
+	align-self: center;
+}
+
+	#email-phone{
+
+		align-self: center;
+	}
+
+	#social-networks{
+		align-self: center;
+
+
+	}
+
+}
