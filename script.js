@@ -25,7 +25,7 @@ form.addEventListener('submit', function(event){
 	
 button.addEventListener('click', function() {
 		if(hasEmptyFields) {
-		
+		alert('Будь ласка, заповніть усі поля!');
 	}else{
 		alert('Дякуємо за ваше повідомлення!');
 	}
