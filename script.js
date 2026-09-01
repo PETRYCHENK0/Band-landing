@@ -8,28 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-const button = document.getElementById('submit');
+
 const form = document.getElementById('contacts-grid');
 
 form.addEventListener('submit', function(event){
-
-	 const inputs = this.querySelectorAll('input[type="text"], input[type="email"], textarea');
-    let hasEmptyFields = false;
-
-	inputs.forEach(input => {
-    if (input.value.trim() === '') {
-      hasEmptyFields = true;
-	
-  	}
-  });
-	
-		if(hasEmptyFields=true) {
-		event.preventDefault();	
-		alert('Будь ласка, заповніть усі поля!');
-	}else{
-		alert('Дякуємо за ваше повідомлення!');
-	}
-	
+alert('Дякуємо за ваше повідомлення!');
 });
 
 
