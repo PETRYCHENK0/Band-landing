@@ -9,12 +9,31 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const button = document.getElementById('submit');
-const form = document.getElementById('submit');
+const form = document.getElementById('contacts-grid');
 
+form.addEventListener('submit', function(event){
+
+	 const inputs = this.querySelectorAll('input[type="text"], input[type="email"], textarea');
+    let hasEmptyFields = false;
+
+	inputs.forEach(input => {
+    if (input.value.trim() === '') {
+      hasEmptyFields = true;
+	
+  	}
+  });
+	
 button.addEventListener('click', function() {
-      alert('Дякуємо за ваше повідомлення!');
+		if(hasEmptyFields) {
+		
+	}else{
+		alert('Дякуємо за ваше повідомлення!');
+	}
+	
 	});
 
+});
+	
 const tickets = document.getElementsByClassName('buy-ticket');
 for (const ticket of tickets) {
     ticket.addEventListener('click', function() {
