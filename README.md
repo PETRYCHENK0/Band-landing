@@ -1,8 +1,8 @@
-# Hrym ta Hrim band landing
+# Hrym ta Hrim rock band landing
 
 A beautiful, responsive landing page built to demonstrate modern web development practices and clean UI/UX design.
 
-[Insert your live link here, e.g., **[Live Demo](https://github.io)**]
+https://petrychenk0.github.io/Band-landing/
 
 ## 🚀 Features
 
