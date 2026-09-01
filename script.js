@@ -16,6 +16,7 @@ alert('Дякуємо за ваше повідомлення!');
 });
 
 
+
 const tickets = document.getElementsByClassName('buy-ticket');
 for (const ticket of tickets) {
     ticket.addEventListener('click', function() {
