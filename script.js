@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const button = document.getElementById('submit');
+const form = document.getElementById('submit');
+
 button.addEventListener('click', function() {
       alert('Дякуємо за ваше повідомлення!');
 	});
