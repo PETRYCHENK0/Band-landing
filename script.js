@@ -23,7 +23,8 @@ form.addEventListener('submit', function(event){
   	}
   });
 	
-		if(hasEmptyFields) {
+		if(hasEmptyFields=true) {
+		event.preventDefault();	
 		alert('Будь ласка, заповніть усі поля!');
 	}else{
 		alert('Дякуємо за ваше повідомлення!');
