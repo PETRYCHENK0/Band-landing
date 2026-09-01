@@ -23,17 +23,15 @@ form.addEventListener('submit', function(event){
   	}
   });
 	
-button.addEventListener('click', function() {
 		if(hasEmptyFields) {
 		alert('Будь ласка, заповніть усі поля!');
 	}else{
 		alert('Дякуємо за ваше повідомлення!');
 	}
 	
-	});
-
 });
-	
+
+
 const tickets = document.getElementsByClassName('buy-ticket');
 for (const ticket of tickets) {
     ticket.addEventListener('click', function() {
