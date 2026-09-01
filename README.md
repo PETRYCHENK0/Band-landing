@@ -2,6 +2,8 @@
 
 A beautiful, responsive landing page built to demonstrate modern web development practices and clean UI/UX design.
 
+## 👁️ Preview
+
 https://petrychenk0.github.io/Band-landing/
 
 ## 🚀 Features
